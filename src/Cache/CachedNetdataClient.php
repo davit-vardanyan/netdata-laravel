@@ -30,7 +30,7 @@ final class CachedNetdataClient
      *
      * @var list<string>
      */
-    private const array CACHED_RESOURCES = [
+    private const CACHED_RESOURCES = [
         'nodes',
         'contexts',
         'info',
@@ -42,7 +42,7 @@ final class CachedNetdataClient
     /**
      * Cache key used to store the registry of all managed cache keys.
      */
-    private const string REGISTRY_KEY = '__netdata_cache_keys__';
+    private const REGISTRY_KEY = '__netdata_cache_keys__';
 
     /**
      * @param  NetdataClient  $client  The underlying SDK client.

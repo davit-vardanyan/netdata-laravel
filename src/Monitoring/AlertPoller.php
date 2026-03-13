@@ -14,7 +14,7 @@ use Illuminate\Notifications\AnonymousNotifiable;
 
 final class AlertPoller
 {
-    private const string CACHE_KEY = 'netdata:alert_poller:last_seen';
+    private const CACHE_KEY = 'netdata:alert_poller:last_seen';
 
     public function __construct(
         private readonly NetdataManager $manager,

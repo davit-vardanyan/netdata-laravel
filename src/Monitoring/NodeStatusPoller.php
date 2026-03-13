@@ -15,7 +15,7 @@ use Illuminate\Notifications\AnonymousNotifiable;
 
 final class NodeStatusPoller
 {
-    private const string CACHE_KEY = 'netdata:node_poller:last_status';
+    private const CACHE_KEY = 'netdata:node_poller:last_status';
 
     public function __construct(
         private readonly NetdataManager $manager,

@@ -12,7 +12,7 @@ use Illuminate\Contracts\Events\Dispatcher;
 
 final class ThresholdMonitor
 {
-    private const string CACHE_KEY = 'netdata:threshold_monitor:breach_start';
+    private const CACHE_KEY = 'netdata:threshold_monitor:breach_start';
 
     public function __construct(
         private readonly NetdataManager $manager,
