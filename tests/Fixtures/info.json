@@ -1,0 +1,13 @@
+{
+    "version": "1.44.0",
+    "uid": "agent-uid-12345",
+    "hostname": "web-server-01",
+    "os": "linux",
+    "architecture": "x86_64",
+    "cpus": 8,
+    "host_labels": {
+        "_os_name": "Ubuntu",
+        "_os_version": "22.04",
+        "_kernel_version": "5.15.0-91-generic"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "system.cpu": {
+        "id": "system.cpu",
+        "nm": "system.cpu",
+        "fm": "cpu",
+        "ct": "stacked",
+        "un": "%",
+        "pr": 100,
+        "fe": 1699900000,
+        "le": 1700000600
+    },
+    "system.ram": {
+        "id": "system.ram",
+        "nm": "system.ram",
+        "fm": "mem",
+        "ct": "stacked",
+        "un": "MiB",
+        "pr": 200,
+        "fe": 1699900000,
+        "le": 1700000600
+    },
+    "system.net": {
+        "id": "system.net",
+        "nm": "system.net",
+        "fm": "net",
+        "ct": "area",
+        "un": "kilobits/s",
+        "pr": 300,
+        "fe": 1699900000,
+        "le": 1700000600
+    }
+}

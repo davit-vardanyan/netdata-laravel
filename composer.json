@@ -1,0 +1,76 @@
+{
+    "name": "davit-vardanyan/netdata-laravel",
+    "description": "A production-ready Laravel wrapper for the Netdata API v3 PHP SDK",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "netdata",
+        "laravel",
+        "monitoring",
+        "metrics",
+        "api",
+        "dashboard"
+    ],
+    "authors": [
+        {
+            "name": "Davit Vardanyan"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/davit-vardanyan/netdata-laravel/issues",
+        "source": "https://github.com/davit-vardanyan/netdata-laravel"
+    },
+    "suggest": {
+        "davit-vardanyan/netdata-php": "Required. The core Netdata API v3 PHP SDK that this package wraps."
+    },
+    "require": {
+        "php": "^8.2",
+        "davit-vardanyan/netdata-php": "^1.0",
+        "illuminate/support": "^11.0|^12.0",
+        "illuminate/console": "^11.0|^12.0",
+        "illuminate/contracts": "^11.0|^12.0",
+        "illuminate/cache": "^11.0|^12.0",
+        "illuminate/events": "^11.0|^12.0",
+        "illuminate/log": "^11.0|^12.0",
+        "illuminate/notifications": "^11.0|^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0",
+        "pestphp/pest": "^3.0",
+        "pestphp/pest-plugin-laravel": "^3.0",
+        "pestphp/pest-plugin-arch": "^3.0",
+        "mockery/mockery": "^1.6",
+        "phpstan/phpstan": "^2.0",
+        "phpstan/phpstan-deprecation-rules": "^2.0",
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DavitVardanyan\\NetdataLaravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DavitVardanyan\\NetdataLaravel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DavitVardanyan\\NetdataLaravel\\NetdataServiceProvider"
+            ],
+            "aliases": {
+                "Netdata": "DavitVardanyan\\NetdataLaravel\\Facades\\Netdata"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

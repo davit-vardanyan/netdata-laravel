@@ -1,0 +1,16 @@
+{
+    "functions": [
+        {
+            "name": "processes",
+            "description": "Show running processes"
+        },
+        {
+            "name": "network-interfaces",
+            "description": "Show network interface statistics"
+        },
+        {
+            "name": "block-devices",
+            "description": "Show block device statistics"
+        }
+    ]
+}

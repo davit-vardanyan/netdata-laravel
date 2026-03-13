@@ -1,0 +1,16 @@
+[
+    {
+        "name": "cpu_high_usage",
+        "chart": "system.cpu",
+        "old_status": "warning",
+        "new_status": "critical",
+        "transition_time": 1700000500
+    },
+    {
+        "name": "disk_space_low",
+        "chart": "disk_space._",
+        "old_status": "clear",
+        "new_status": "warning",
+        "transition_time": 1700000400
+    }
+]

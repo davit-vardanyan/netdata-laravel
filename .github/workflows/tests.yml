@@ -1,0 +1,23 @@
+name: Tests
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['8.2', '8.3', '8.4']
+        laravel: ['11.*', '12.*']
+        exclude:
+          - php: '8.2'
+            laravel: '12.*'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: xdebug
+      - name: Set Laravel version
+        run: composer require "illuminate/support:${{ matrix.laravel }}" --no-update
+      - run: composer install --no-interaction --prefer-dist
+      - run: vendor/bin/phpstan analyse
+      - run: vendor/bin/pest --coverage-text --coverage-clover=coverage.xml

@@ -1,0 +1,50 @@
+[
+    {
+        "ni": "node-1-id",
+        "nm": "web-server-01",
+        "os": "linux",
+        "on": "Ubuntu",
+        "ov": "22.04",
+        "kn": "Linux",
+        "kv": "5.15.0-91-generic",
+        "ar": "x86_64",
+        "cp": 8,
+        "me": "16 GiB",
+        "ds": "500 GiB",
+        "ve": "1.44.0",
+        "mg": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+        "sv": ["netdata", "nginx", "mysql"]
+    },
+    {
+        "ni": "node-2-id",
+        "nm": "db-server-01",
+        "os": "linux",
+        "on": "Debian",
+        "ov": "12",
+        "kn": "Linux",
+        "kv": "6.1.0-13-amd64",
+        "ar": "x86_64",
+        "cp": 16,
+        "me": "64 GiB",
+        "ds": "2 TiB",
+        "ve": "1.44.0",
+        "mg": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+        "sv": ["netdata", "postgresql"]
+    },
+    {
+        "ni": "node-3-id",
+        "nm": "app-server-01",
+        "os": "linux",
+        "on": "CentOS",
+        "ov": "9",
+        "kn": "Linux",
+        "kv": "5.14.0-362.el9.x86_64",
+        "ar": "x86_64",
+        "cp": 4,
+        "me": "8 GiB",
+        "ds": "100 GiB",
+        "ve": "1.44.0",
+        "mg": "c3d4e5f6-a7b8-9012-cdef-123456789012",
+        "sv": ["netdata", "php-fpm", "redis"]
+    }
+]

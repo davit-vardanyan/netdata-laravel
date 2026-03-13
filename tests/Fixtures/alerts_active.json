@@ -1,0 +1,29 @@
+[
+    {
+        "nm": "cpu_high_usage",
+        "ch": "system.cpu",
+        "st": "critical",
+        "vl": 95.5,
+        "un": "%",
+        "in": "CPU usage is critically high",
+        "ls": 1700000500
+    },
+    {
+        "nm": "disk_space_low",
+        "ch": "disk_space._",
+        "st": "warning",
+        "vl": 85.2,
+        "un": "%",
+        "in": "Disk space is running low",
+        "ls": 1700000400
+    },
+    {
+        "nm": "memory_available",
+        "ch": "system.ram",
+        "st": "clear",
+        "vl": 45.0,
+        "un": "%",
+        "in": "Memory usage is normal",
+        "ls": 1700000300
+    }
+]
