@@ -11,7 +11,7 @@ A production-ready Laravel wrapper for the [Netdata API v3 PHP SDK](https://gith
 ## Requirements
 
 - PHP 8.2+
-- Laravel 11.x or 12.x
+- Laravel 11.x, 12.x, or 13.x
 - [davit-vardanyan/netdata-php](https://github.com/davit-vardanyan/netdata-php) ^1.0
 
 ## Installation
@@ -299,6 +299,30 @@ vendor/bin/pest              # Run tests (63 tests, 136 assertions)
 vendor/bin/phpstan analyse   # Static analysis (level 8)
 vendor/bin/pint --test       # Code style check (Laravel preset)
 ```
+
+## Releasing
+
+To create a new tag and GitHub release entirely from the command line:
+
+```bash
+# 1. Bump version in composer.json, update CHANGELOG.md, commit
+git add composer.json CHANGELOG.md
+git commit -m "chore: release v1.x.x"
+
+# 2. Create an annotated tag
+git tag -a v1.x.x -m "Release v1.x.x"
+
+# 3. Push the commit and the tag
+git push origin main
+git push origin v1.x.x
+
+# 4. Create the GitHub release (requires the gh CLI)
+gh release create v1.x.x \
+  --title "v1.x.x" \
+  --notes "$(sed -n '/^## \[1.x.x\]/,/^## \[/p' CHANGELOG.md | head -n -1)"
+```
+
+The `sed` command above extracts the relevant CHANGELOG section automatically as release notes. Install the `gh` CLI with `brew install gh` and authenticate once with `gh auth login`.
 
 ## License
 
